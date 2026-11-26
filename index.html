@@ -62,6 +62,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .flow li { display: grid; grid-template-columns: minmax(4.5rem, .45fr) 1fr; gap: .5rem; align-items: baseline; padding: .8rem 0; border-top: 1px solid #729084; }
 .flow strong { color: var(--gold); font-weight: 600; }
 .projects { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.25rem; }
+.project-wide { grid-column: 1 / -1; }
 .project { padding: 1.55rem 0; border-bottom: 1px solid var(--line); }
 .project h3, .entry h3 { margin: .35rem 0 .55rem; }
 .project p:not(.meta), .entry p:not(.meta) { color: var(--muted); }
@@ -156,6 +157,12 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
           <h3>RecoverFlow</h3>
           <p>An evaluator for how LLM coding agents repair their own code. It logs each attempt, keeps feedback tests separate from hidden tests, and uses the resulting traces to model recovery.</p>
           <div class="links"><a href="https://github.com/michaeldo07/recoverflow">RecoverFlow source</a></div>
+        </article>
+        <article class="project project-wide">
+          <p class="meta">Data Science at Georgia Tech · Team project in progress</p>
+          <h3>Deep Learning Playground</h3>
+          <p>I’m working with DS@GT on a browser-based tool for learning deep learning. Students can choose or upload a dataset, arrange model layers in a drag-and-drop editor, and set training parameters for a PyTorch model. The Next.js frontend connects to a Django training API backed by Celery workers.</p>
+          <div class="links"><a href="https://github.com/DataScience-GT/Deep-Learning-Playground">Deep Learning Playground source</a></div>
         </article>
       </div>
     </section>
