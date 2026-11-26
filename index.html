@@ -63,6 +63,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .project, .entry { background: var(--surface); border: 1px solid var(--panel-border); border-radius: .55rem; padding: clamp(1rem, 2.1vw, 1.5rem); }
 .project { border-top: 3px solid #58816d; }
+.project-stack { margin-top: .8rem; }
 #research .entry { border-color: #ddcfad; border-left: 3px solid #a77e32; }
 #experience .entry { border-left: 3px solid #58816d; }
 .project h3, .entry h3 { margin: .35rem 0 .55rem; }
@@ -158,32 +159,35 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
           <p class="meta">HackGT 13 · 1st Place, Web Development Track</p>
           <h3>Bear With Me</h3>
           <p>My team built a pediatric intake prototype that lets kids talk to an animated bear while parents answer questions separately. The app puts both accounts in a one-page brief so clinicians can spot where the answers differ.</p>
-          <p class="meta">Next.js · xAI · OpenCV · Supabase</p>
+          <p class="meta project-stack">Next.js · xAI · OpenCV · Supabase</p>
           <div class="links"><a href="https://bearwithme.tech/demo">Try the demo</a></div>
         </article>
         <article class="project">
           <p class="meta">2024 Congressional App Challenge · GA-08 winner</p>
           <h3>Signify</h3>
           <p>An iOS app for on-device ASL recognition. I helped train a temporal convolutional network on 80,000+ isolated sign recordings and deploy it with Swift and Core ML.</p>
+          <p class="meta project-stack">Swift · Core ML · Python · MediaPipe</p>
           <div class="links"><a href="https://github.com/rainsyy/Signify-App-Repository">Signify source</a><a href="https://www.congressionalappchallenge.us/24-ga08/">Award write-up</a></div>
         </article>
         <article class="project">
-          <p class="meta">Research in progress · Python</p>
+          <p class="meta">Research in progress</p>
           <h3>RecoverFlow</h3>
           <p>An evaluator for how LLM coding agents repair their own code. It logs each attempt, keeps feedback tests separate from hidden tests, and uses the resulting traces to model recovery.</p>
+          <p class="meta project-stack">Python · pandas · scikit-learn · Matplotlib · Hugging Face Transformers · PyTorch</p>
           <div class="links"><a href="https://github.com/michaeldo07/recoverflow">RecoverFlow source</a></div>
         </article>
         <article class="project">
           <p class="meta">Georgia Tech SGA Campus Solutions Challenge · In progress</p>
           <h3>GT Swarm</h3>
           <p>I built an AI-powered platform that helps Georgia Tech students and alumni find startup collaborators. It matches people based on their skills and how their profiles relate, explains why each match was suggested, and lets users explore those connections on an interactive network map.</p>
-          <p class="meta">Next.js · Supabase · PostgreSQL · Vercel · Gemini API</p>
+          <p class="meta project-stack">Next.js · Supabase · PostgreSQL · Vercel · Gemini API</p>
           <div class="links"><a href="https://gtswarm.vercel.app/">Explore GT Swarm</a></div>
         </article>
         <article class="project">
           <p class="meta">Data Science at Georgia Tech · Team project in progress</p>
           <h3>Deep Learning Playground</h3>
           <p>I’m working with DS@GT on a browser-based tool for learning deep learning. Students can choose or upload a dataset, arrange model layers in a drag-and-drop editor, and set training parameters for a PyTorch model. The Next.js frontend connects to a Django training API backed by Celery workers.</p>
+          <p class="meta project-stack">TypeScript · Next.js · React · Python · Django · PyTorch · Celery · Redis · Docker Compose</p>
           <div class="links"><a href="https://github.com/DataScience-GT/Deep-Learning-Playground">Deep Learning Playground source</a></div>
         </article>
       </div>
