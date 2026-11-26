@@ -52,23 +52,20 @@ h1 { margin: .35rem 0 1.1rem; font-size: clamp(4.15rem, 9vw, 8rem); letter-spaci
 .portrait { background: var(--gold); padding: .65rem .65rem .5rem; transform: rotate(2deg); box-shadow: 5px 6px 0 #e4e5db; }
 .portrait img { display: block; width: 100%; height: auto; background: var(--line); }
 .caption { padding: .55rem .2rem .15rem; }
-.section { margin-bottom: clamp(1.15rem, 3vw, 2rem); padding: clamp(1.15rem, 4vw, 2.75rem); border: 1px solid var(--panel-border); border-radius: .85rem; }
-#work, #about { background: var(--mint); }
+.section { margin-bottom: clamp(1.15rem, 3vw, 2rem); padding: clamp(1.15rem, 4vw, 2.75rem); border-top: 1px solid var(--panel-border); }
+#about { background: var(--mint); }
 #research { background: var(--sand); border-color: #dcd0b4; }
-#experience { background: #f0f1e9; }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .75rem 2rem; margin-bottom: 1.8rem; }
 h2 { font-size: clamp(2.65rem, 5vw, 4rem); letter-spacing: -.065em; }
 h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .meta { color: var(--muted); }
-.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-.project, .entry { background: var(--surface); border: 1px solid var(--panel-border); border-radius: .55rem; padding: clamp(1rem, 2.1vw, 1.5rem); }
-.project { border-top: 3px solid #58816d; }
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.25rem; }
+.project, .entry { min-width: 0; padding: 1.2rem 0; border-top: 1px solid var(--line); }
 .project-stack { margin-top: .8rem; }
-#research .entry { border-color: #ddcfad; border-left: 3px solid #a77e32; }
-#experience .entry { border-left: 3px solid #58816d; }
+#research .entry { border-color: #d4c49f; }
 .project h3, .entry h3 { margin: .35rem 0 .55rem; }
 .project p:not(.meta), .entry p:not(.meta) { color: var(--muted); }
-.entries { display: grid; gap: .85rem; }
+.entries { display: grid; }
 .entry { display: grid; grid-template-columns: minmax(10rem,.37fr) minmax(0,1fr); gap: .5rem 2rem; }
 .entry h3 { margin-top: 0; }
 .entry .links { margin-top: .65rem; }
@@ -85,7 +82,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .about-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: .5rem .75rem; align-items: center; }
 .about-photos figure { background: #fff; padding: .55rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-3deg); }
 .about-photos figure:nth-child(even) { transform: rotate(3deg); }
-.about-campus { background: var(--surface); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); border-radius: .45rem; margin-top: 1.7rem; padding: 1rem 1.25rem; }
+.about-campus { background: var(--surface); border: 1px solid var(--panel-border); border-left: 3px solid var(--accent); margin-top: 1.7rem; padding: 1rem 1.25rem; }
 .about-campus h3 { font-size: 1.5rem; }
 .about-campus ul { list-style: none; padding: 0; margin: .7rem 0 0; }
 .about-campus li + li { margin-top: .65rem; }
