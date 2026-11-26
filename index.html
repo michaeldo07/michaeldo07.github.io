@@ -75,10 +75,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .footer { justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line); padding: 1.2rem 0 2.2rem; }
 #experience .entry p + p { margin-top: .75rem; }
 .about-copy { max-width: 44rem; }
-.about-copy > p + p { margin-top: 1rem; }
 .about-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
 .about-photos figure { min-width: 0; }
-.about-photos img { display: block; width: 100%; height: auto; border-radius: .35rem; }
+.about-photos img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: contain; background: #e9eee6; border-radius: .35rem; }
 @media (max-width: 700px) {
   .wrap { width: calc(100% - 2rem); }
   .hero { grid-template-columns: 1fr; gap: 2.4rem; }
@@ -242,10 +241,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="section-head"><h2 id="about-title">About me</h2></div>
       <div class="about-copy">
-        <p>I’m from Warner Robins, Georgia. Outside of school and work, I’m usually happiest playing a sport, exploring somewhere new, or helping someone learn a skill I care about.</p>
-        <p>Tennis is my favorite sport. I played varsity in high school, and I still like how much thinking goes into a match. You might spend a few games trying to hit through someone before realizing that changing the pace works better. Playing taught me to pay attention to what’s happening and let go of the last point once it’s over.</p>
-        <p>I like trying things that take me out of my usual routine, too. Ice climbing was one of those experiences. I like the challenge of slowing down and figuring out the next move one step at a time.</p>
-        <p>I care a lot about making coding feel approachable. When I teach, I like giving students something small they can change right away. Once they see what that change does, it’s easier for them to start asking their own questions and trying their own ideas. My favorite part is seeing someone get excited enough about what they made to turn their screen around and show the person next to them.</p>
+        <p>I love playing tennis, exploring new places, and trying things like ice climbing. I also enjoy teaching coding and helping people turn their own ideas into projects.</p>
       </div>
       <div class="about-photos">
         <figure>
