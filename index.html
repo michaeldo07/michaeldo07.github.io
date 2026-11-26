@@ -53,16 +53,7 @@ h1 { margin: .35rem 0 1.1rem; font-size: clamp(4.15rem, 9vw, 8rem); letter-spaci
 h2 { font-size: clamp(2.65rem, 5vw, 4rem); letter-spacing: -.065em; }
 h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .meta { color: var(--muted); }
-.feature { display: grid; grid-template-columns: 1.05fr 1fr; background: #e9eee6; border: 1px solid #ccd6c9; }
-.feature-copy { padding: clamp(1.35rem, 3.5vw, 2.6rem); }
-.feature h3 { font-size: clamp(2.1rem, 4vw, 3.2rem); margin: .5rem 0 .75rem; }
-.flow { align-self: stretch; background: #224b3e; color: #fbf9ee; padding: clamp(1.35rem, 4vw, 2.6rem); display: grid; align-content: center; gap: .65rem; }
-.flow span { display: block; opacity: .87; font: .79rem/1.45 var(--mono); }
-.flow ol { margin: 0; padding: 0; list-style: none; }
-.flow li { display: grid; grid-template-columns: minmax(4.5rem, .45fr) 1fr; gap: .5rem; align-items: baseline; padding: .8rem 0; border-top: 1px solid #729084; }
-.flow strong { color: var(--gold); font-weight: 600; }
 .projects { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2.25rem; }
-.project-wide { grid-column: 1 / -1; }
 .project { padding: 1.55rem 0; border-bottom: 1px solid var(--line); }
 .project h3, .entry h3 { margin: .35rem 0 .55rem; }
 .project p:not(.meta), .entry p:not(.meta) { color: var(--muted); }
@@ -90,17 +81,17 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
   .wrap { width: calc(100% - 2rem); }
   .hero { grid-template-columns: 1fr; gap: 2.4rem; }
   .portrait { max-width: 14rem; transform: rotate(1deg); }
-  .feature, .projects, .entry { grid-template-columns: 1fr; }
+  .projects, .entry { grid-template-columns: 1fr; }
   .about-layout { grid-template-columns: 1fr; }
   .about-photos { max-width: 32rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
   :root { --paper: white; }
-  .masthead, .portrait, .footer, .flow { display: none; }
+  .masthead, .portrait, .footer { display: none; }
   .wrap { width: 100%; }
   .hero, .section { padding: 1rem 0; }
-  .hero, .feature { display: block; }
+  .hero { display: block; }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   article, .about-photos figure { break-inside: avoid; }
@@ -147,24 +138,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
         <h2 id="work-title">Selected work</h2>
         <a href="https://github.com/michaeldo07?tab=repositories">All GitHub repositories</a>
       </div>
-      <article class="feature">
-        <div class="feature-copy">
-          <p class="kicker">HackGT 13 · 1st Place, Web Development Track</p>
+      <div class="projects">
+        <article class="project">
+          <p class="meta">HackGT 13 · 1st Place, Web Development Track</p>
           <h3>Bear With Me</h3>
           <p>My team built a pediatric intake prototype that lets kids talk to an animated bear while parents answer questions separately. The app puts both accounts in a one-page brief so clinicians can spot where the answers differ.</p>
-          <p class="links"><a href="https://bearwithme.tech/demo">Try the demo</a></p>
-        </div>
-        <div class="flow">
-          <span>How the intake works</span>
-          <ol>
-            <li><strong>Child</strong><span>Voice conversation with Bear</span></li>
-            <li><strong>Parent</strong><span>Separate intake on their phone</span></li>
-            <li><strong>Doctor</strong><span>One brief with both accounts</span></li>
-          </ol>
-          <span>Next.js · xAI · OpenCV · Supabase</span>
-        </div>
-      </article>
-      <div class="projects">
+          <p class="meta">Next.js · xAI · OpenCV · Supabase</p>
+          <div class="links"><a href="https://bearwithme.tech/demo">Try the demo</a></div>
+        </article>
         <article class="project">
           <p class="meta">2024 Congressional App Challenge · GA-08 winner</p>
           <h3>Signify</h3>
@@ -177,14 +158,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
           <p>An evaluator for how LLM coding agents repair their own code. It logs each attempt, keeps feedback tests separate from hidden tests, and uses the resulting traces to model recovery.</p>
           <div class="links"><a href="https://github.com/michaeldo07/recoverflow">RecoverFlow source</a></div>
         </article>
-        <article class="project project-wide">
-          <p class="meta">Georgia Tech SGA Campus Solutions Challenge · Completed</p>
+        <article class="project">
+          <p class="meta">Georgia Tech SGA Campus Solutions Challenge · In progress</p>
           <h3>GT Swarm</h3>
           <p>I built an AI-powered platform that helps Georgia Tech students and alumni find startup collaborators. It matches people based on their skills and how their profiles relate, explains why each match was suggested, and lets users explore those connections on an interactive network map.</p>
           <p class="meta">Next.js · Supabase · PostgreSQL · Vercel · Gemini API</p>
           <div class="links"><a href="https://gtswarm.vercel.app/">Explore GT Swarm</a></div>
         </article>
-        <article class="project project-wide">
+        <article class="project">
           <p class="meta">Data Science at Georgia Tech · Team project in progress</p>
           <h3>Deep Learning Playground</h3>
           <p>I’m working with DS@GT on a browser-based tool for learning deep learning. Students can choose or upload a dataset, arrange model layers in a drag-and-drop editor, and set training parameters for a PyTorch model. The Next.js frontend connects to a Django training API backed by Celery workers.</p>
