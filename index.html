@@ -82,9 +82,9 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .about-campus ul { list-style: none; padding: 0; margin: .7rem 0 0; }
 .about-campus li + li { margin-top: .65rem; }
 .about-campus span { display: block; color: var(--muted); }
-.about-photos { display: grid; grid-template-columns: repeat(8, minmax(0,1fr)); gap: 1rem 0; padding: .5rem .75rem; }
-.about-photos figure { grid-column: 1 / 7; background: #fff; padding: .55rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-3deg); }
-.about-photos figure + figure { grid-column: 3 / 9; margin-top: -2rem; transform: rotate(3deg); }
+.about-photos { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: center; gap: 1rem; padding: .5rem .75rem; }
+.about-photos figure { background: #fff; padding: .45rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-3deg); }
+.about-photos figure:nth-child(even) { transform: rotate(3deg); }
 .about-photos img { display: block; width: 100%; height: auto; }
 @media (max-width: 700px) {
   .wrap { width: calc(100% - 2rem); }
@@ -103,7 +103,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
   article, .about-photos { break-inside: avoid; }
-  .about-photos figure { transform: none; }
+  .about-photos figure, .about-photos figure:nth-child(even) { transform: none; }
 }
 </style>
 </head>
@@ -270,6 +270,14 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
           <figure>
             <img src="./michael-on-stage.jpg" width="2048" height="1152" alt="Michael speaking into a microphone on stage" loading="lazy" decoding="async">
             <figcaption class="caption">On stage, 2025</figcaption>
+          </figure>
+          <figure>
+            <img src="./michael-nextgen-coders.jpg" width="1024" height="506" alt="Michael helping a student at a computer during a NextGen Coders workshop" loading="lazy" decoding="async">
+            <figcaption class="caption">Teaching at NextGen Coders</figcaption>
+          </figure>
+          <figure>
+            <img src="./michael-ice-climbing.jpg" width="1152" height="1536" alt="Ice climber on a frozen wall" loading="lazy" decoding="async">
+            <figcaption class="caption">Ice climbing</figcaption>
           </figure>
         </div>
       </div>
