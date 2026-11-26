@@ -74,19 +74,17 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .contact .links { margin: 0; }
 .footer { justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line); padding: 1.2rem 0 2.2rem; }
 #experience .entry p + p { margin-top: .75rem; }
-.about-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.2fr); align-items: center; gap: clamp(2rem, 6vw, 5rem); }
+.about-copy { max-width: 44rem; }
 .about-copy > p + p { margin-top: 1rem; }
-.about-lead { font: clamp(1.45rem, 3vw, 2.1rem)/1.22 var(--serif); }
-.about-photos { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: center; gap: 1rem; padding: .5rem .75rem; }
-.about-photos figure { background: #fff; padding: .45rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-3deg); }
-.about-photos figure:nth-child(even) { transform: rotate(3deg); }
-.about-photos img { display: block; width: 100%; height: auto; }
+.about-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
+.about-photos figure { min-width: 0; }
+.about-photos img { display: block; width: 100%; height: auto; border-radius: .35rem; }
 @media (max-width: 700px) {
   .wrap { width: calc(100% - 2rem); }
   .hero { grid-template-columns: 1fr; gap: 2.4rem; }
   .portrait { max-width: 14rem; transform: rotate(1deg); }
-  .feature, .projects, .entry, .about-layout { grid-template-columns: 1fr; }
-  .about-photos { max-width: 34rem; }
+  .feature, .projects, .entry { grid-template-columns: 1fr; }
+  .about-photos { grid-template-columns: 1fr; max-width: 30rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 @media print {
@@ -97,8 +95,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
   .hero, .feature { display: block; }
   h1 { font-size: 3rem; }
   h2 { font-size: 2rem; }
-  article, .about-photos { break-inside: avoid; }
-  .about-photos figure, .about-photos figure:nth-child(even) { transform: none; }
+  article, .about-photos figure { break-inside: avoid; }
 }
 </style>
 </head>
@@ -244,30 +241,25 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="section-head"><h2 id="about-title">About me</h2></div>
-      <div class="about-layout">
-        <div class="about-copy">
-          <p class="about-lead">I love sports, especially tennis, and I’m always up for an adventure.</p>
-          <p>On the court, I like figuring out what to try on the next point. Off the court, I enjoy exploring new places and trying things I haven’t done before, like ice climbing.</p>
-          <p>I also love helping people learn to code. My favorite part of teaching is watching someone go from being stuck on an idea to building something they’re excited to show other people.</p>
-        </div>
-        <div class="about-photos">
-          <figure>
-            <img src="./michael-hollywood.jpg" width="2048" height="1536" alt="Michael pointing toward the Hollywood sign" loading="lazy" decoding="async">
-            <figcaption class="caption">Hollywood, California</figcaption>
-          </figure>
-          <figure>
-            <img src="./michael-on-stage.jpg" width="2048" height="1152" alt="Michael speaking into a microphone on stage" loading="lazy" decoding="async">
-            <figcaption class="caption">On stage, 2025</figcaption>
-          </figure>
-          <figure>
-            <img src="./michael-nextgen-coders.jpg" width="1024" height="506" alt="Michael helping a student at a computer during a coding workshop" loading="lazy" decoding="async">
-            <figcaption class="caption">Teaching a coding workshop</figcaption>
-          </figure>
-          <figure>
-            <img src="./michael-ice-climbing.jpg" width="1152" height="1536" alt="Ice climber on a frozen wall" loading="lazy" decoding="async">
-            <figcaption class="caption">Ice climbing</figcaption>
-          </figure>
-        </div>
+      <div class="about-copy">
+        <p>I’m from Warner Robins, Georgia. Outside of school and work, I’m usually happiest playing a sport, exploring somewhere new, or helping someone learn a skill I care about.</p>
+        <p>Tennis is my favorite sport. I played varsity in high school, and I still like how much thinking goes into a match. You might spend a few games trying to hit through someone before realizing that changing the pace works better. Playing taught me to pay attention to what’s happening and let go of the last point once it’s over.</p>
+        <p>I like trying things that take me out of my usual routine, too. Ice climbing was one of those experiences. I like the challenge of slowing down and figuring out the next move one step at a time.</p>
+        <p>I care a lot about making coding feel approachable. When I teach, I like giving students something small they can change right away. Once they see what that change does, it’s easier for them to start asking their own questions and trying their own ideas. My favorite part is seeing someone get excited enough about what they made to turn their screen around and show the person next to them.</p>
+      </div>
+      <div class="about-photos">
+        <figure>
+          <img src="./michael-on-stage.jpg" width="2048" height="1152" alt="Michael speaking into a microphone on stage" loading="lazy" decoding="async">
+          <figcaption class="caption">On stage, 2025</figcaption>
+        </figure>
+        <figure>
+          <img src="./michael-nextgen-coders.jpg" width="1024" height="506" alt="Michael helping a student at a computer during a coding workshop" loading="lazy" decoding="async">
+          <figcaption class="caption">Teaching a coding workshop</figcaption>
+        </figure>
+        <figure>
+          <img src="./michael-ice-climbing.jpg" width="1152" height="1536" alt="Ice climber on a frozen wall" loading="lazy" decoding="async">
+          <figcaption class="caption">Ice climbing</figcaption>
+        </figure>
       </div>
     </section>
 
