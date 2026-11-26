@@ -74,12 +74,17 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
 .contact .links { margin: 0; }
 .footer { justify-content: space-between; gap: 1rem; border-top: 1px solid var(--line); padding: 1.2rem 0 2.2rem; }
 #experience .entry p + p { margin-top: .75rem; }
-.about-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+.about-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(2rem, 6vw, 5rem); align-items: center; }
 .about-copy p + p { margin-top: .9rem; }
 .about-lead { font: clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif); }
-.about-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .9rem; padding: .35rem .5rem; align-items: center; }
-.about-photos figure { background: #fff; padding: .45rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-2deg); }
-.about-photos figure:last-child { grid-column: 2; grid-row: 1 / span 2; transform: rotate(2deg); }
+.about-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: .5rem .75rem; align-items: center; }
+.about-photos figure { background: #fff; padding: .55rem; border: 1px solid var(--line); box-shadow: 4px 5px 0 #e4e5db; transform: rotate(-3deg); }
+.about-photos figure:nth-child(even) { transform: rotate(3deg); }
+.about-campus { background: #e9eee6; border-left: 3px solid var(--accent); margin-top: 1.7rem; padding: 1rem 1.25rem; }
+.about-campus h3 { font-size: 1.5rem; }
+.about-campus ul { list-style: none; padding: 0; margin: .7rem 0 0; }
+.about-campus li + li { margin-top: .65rem; }
+.about-campus span { display: block; color: var(--muted); }
 .about-photos img { display: block; width: 100%; height: auto; }
 @media (max-width: 700px) {
   .wrap { width: calc(100% - 2rem); }
@@ -111,7 +116,7 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
       <a href="#work">Work</a>
       <a href="#research">Research</a>
       <a href="#experience">Experience</a>
-      <a href="#about">About</a>
+      <a href="#about">Outside of school</a>
       <a href="#contact">Contact</a>
       <a href="./Michael_Do_Resume.pdf?v=20261126-3" target="_blank" rel="noopener" aria-label="Resume PDF (opens in a new tab)">Resume (PDF)</a>
     </nav>
@@ -243,20 +248,31 @@ h3 { font-size: clamp(1.5rem, 2.5vw, 2.08rem); letter-spacing: -.036em; }
     </section>
 
     <section class="section" id="about" aria-labelledby="about-title">
-      <div class="section-head"><h2 id="about-title">About me</h2></div>
+      <div class="section-head"><h2 id="about-title">Outside of school</h2></div>
       <div class="about-layout">
         <div class="about-copy">
           <p class="about-lead">In my free time, I love playing tennis and going on adventures.</p>
           <p>I enjoy exploring new places and trying things like ice climbing. I also love helping people learn to code. It’s fun to watch someone get comfortable enough to start experimenting and turn an idea of their own into something they can share.</p>
+          <div class="about-campus">
+            <h3>On campus</h3>
+            <ul>
+              <li><a href="https://datasciencegt.org/">Data Science at Georgia Tech</a><span>Deep Learning Playground team</span></li>
+              <li><a href="https://www.aigatech.org/">Artificial Intelligence at Georgia Tech</a><span>Applied Research team</span></li>
+            </ul>
+          </div>
         </div>
         <div class="about-photos">
+          <figure>
+            <img src="./michael-hollywood.jpg" width="2048" height="1536" alt="Michael pointing toward the Hollywood sign" loading="lazy" decoding="async">
+            <figcaption class="caption">Hollywood, California</figcaption>
+          </figure>
           <figure>
             <img src="./michael-on-stage.jpg" width="2048" height="1152" alt="Michael speaking into a microphone on stage" loading="lazy" decoding="async">
             <figcaption class="caption">On stage, 2025</figcaption>
           </figure>
           <figure>
             <img src="./michael-nextgen-coders.jpg" width="1024" height="506" alt="Michael helping a student at a computer during a coding workshop" loading="lazy" decoding="async">
-            <figcaption class="caption">Teaching a coding workshop</figcaption>
+            <figcaption class="caption">Teaching at NextGen Coders</figcaption>
           </figure>
           <figure>
             <img src="./michael-ice-climbing.jpg" width="1152" height="1536" alt="Ice climber on a frozen wall" loading="lazy" decoding="async">
